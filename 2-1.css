@@ -1,0 +1,36 @@
+body {width: 100%;}
+#head {width: 100%; border-bottom: 1px solid #c6c6c6; margin-bottom: 50px; position: fixed; background: #fff; z-index: 10;} 
+#header {width: 1024px; margin: 0 auto; overflow: visible;}
+#top_menu {position: relative; background: #fff;}
+
+#article1 {background: #ededed; padding: 84px; }
+#article2 {background: #ffffff;}
+#article3 {background: #ededed; padding-bottom: 80px;}
+
+.article_box {width: 1024px; margin: 0 auto; text-align: center;}
+.article_box div {padding: 20px 0px;}
+.article_box div:nth-child(1) {font-size: 14px; border: 1px solid black; border-radius: 5px; display: inline-block; padding: 10px; margin-top: 50px;}
+.article_box div:nth-child(2) {font-size: 30px; font-weight: bold; line-height: 1.5; font-family: 'Chivo', sans-serif;}
+.article_box div:nth-child(3) {line-height: 1.5;}
+.article_box div:nth-child(5) {font-weight: bold; line-height: 1.5;}
+
+#article1 .article_box div:nth-child(4) {width: 80%; margin: 20px auto;}
+
+#article2 .article_box div:nth-child(4) {width: 80%; margin: 20px auto; position: relative;}
+
+#article2 .article_box div:nth-child(4) img:nth-child(1) {width: 40%; position: relative; left: -190px; top: 0; }
+#article2 .article_box div:nth-child(4) i:nth-child(2) {position: absolute; left: 400px; top: 150px;}
+#article2 .article_box div:nth-child(4) img:nth-child(3) {position: absolute; right: 70px; top: 30px; width: 35%;}
+
+#article_image {padding-top: 30px;}
+#article_image .image_box {width: 80%; margin: 0 auto; padding: 0px !important; border: 0;}
+#article_image .image_box ul {display: flex;}
+#article_image .image_box ul li {flex: 1;}
+#article_image .image_box ul li img {vertical-align: bottom;}
+#top_box {background: #ededed;}
+#top {font-family: 'Chivo', sans-serif; display: inline-block;  color: #fff; background: #adadad; padding: 8px 12px; border-radius: 30px; position: relative; left: 1100px; top: -15px; cursor: pointer;}
+#top:hover {background: #80bd01;}
+#top i {position: absolute; left: 20px; top: 12px;}
+
+#last {width: 100%; height: 160px; background: #333337;}
+#lastbox { width: 1024px; margin: 0 auto; top: 160px;}

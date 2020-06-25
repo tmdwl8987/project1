@@ -1,0 +1,40 @@
+body {width: 100%;}
+#head {width: 100%; border-bottom: 1px solid #c6c6c6; margin-bottom: 50px; position: fixed; background: #fff;} 
+#header {width: 1024px; margin: 0 auto; overflow: visible;}
+#top_menu {position: relative; background: #fff;}
+
+
+/*--------------------------------------------------------------------*/
+#section {width: 1024px; margin: 0 auto; overflow: hidden; padding-top: 120px; padding-bottom: 50px;}
+#section article {float: left; width: 50%; height: 500px;}
+#section article:nth-child(2n-1){padding-left: 100px; }
+#section article:nth-child(2n){padding-right: 100px;}
+#section article:nth-child(1) {padding-left: 150px;}
+#section article:nth-child(5) {padding-left: 150px;}
+#section article:nth-child(9) {padding-left: 150px;}
+#section article:nth-child(4) {padding-left: 50px;}
+#section article:nth-child(8) {padding-left: 50px;}
+
+#section .txt {padding-top: 100px;}
+#section .txt div {margin: 15px 0px}
+#section .txt div:nth-child(1) {color: #80bd01; font-size: 14px; border: 1px solid #80bd01; border-radius: 5px; display: inline-block; padding: 1px 10px;}
+#section .txt div:nth-child(2) h1 {font-weight: 500; font-size: 27px; font-family: 'Chivo', sans-serif;}
+#section .txt div:nth-child(2) h1 strong {color : #80bd01;}
+#section .txt div:nth-child(3) {font-size: 14px; line-height: 1.5;}
+#section .txt ul {overflow: hidden;}
+#section .txt ul li {float: left; margin-right: 10px;}
+
+#section .txt ul li:nth-child(2n-1) {color: #80bd01; border-bottom: 1px solid #80bd01; padding-bottom: 2px;}
+#section .txt ul li:nth-child(2n) a {display: block; text-indent: -9999px; background: url(image_sub/sub_3_button.png) no-repeat; width: 25px; height: 25px;}
+#section .txt ul li:nth-child(2n):hover a {background-position: 0 -26px;}
+
+#top {font-family: 'Chivo', sans-serif; display: inline-block;  color: #fff; background: #adadad; padding: 8px 12px; border-radius: 30px; position: relative; left: 1100px; top: -15px; cursor: pointer;}
+#top:hover {background: #80bd01;}
+#top i {position: absolute; left: 20px; top: 12px;}
+
+
+/*----------------------------------------------------------*/
+#last {width: 100%; height: 160px; background: #333337;}
+#lastbox { width: 1024px; margin: 0 auto; top: 160px;}
+
+

@@ -1,0 +1,60 @@
+<script>
+    // 메뉴>서브메뉴 
+    $(document).ready(function(){
+        $(".sub").hide()
+        $("#nav>ul>li").mouseenter(function(){
+            var i = $(this).index();
+            $(".sub").eq(i).stop().slideDown();
+            }).mouseleave(function(){
+            $(".sub").stop().slideUp();
+        });
+    });
+</script>
+            
+<div id="top_menu">
+    <div id="main_logo"><a href="index.html"><img src="image/logo.png" alt=""></a></div>
+    <div id="nav">
+         <ul>
+            <li>휴롬스토리
+                <ul class="sub">
+                    <li><a href="1-1.html" target="_blank">회사소개</a></li>
+                    <li><a href="#">R&D센터</a></li>
+                    <li><a href="#">사회공헌</a></li>
+                </ul>
+            </li>
+            <li>특별한휴롬
+                <ul class="sub">
+                    <li><a href="2-1.html" target="_blank">휴롬의 기술</a></li>
+                    <li><a href="#">왜? 건강주스인가</a></li>
+                    <li><a href="#">왜? 휴롬 천연주스인가</a></li>
+                </ul>
+            </li>
+            <li>제품
+                <ul class="sub">
+                    <li><a href="3-1.html" target="_blank">휴롬원액기</a></li>
+                    <li><a href="#">휴롬블렌더</a></li>
+                    <li><a href="#">휴롬티마스터</a></li>
+                    <li><a href="#">휴롬셰프</a></li>
+                    <li><a href="#">휴롬스퀴저</a></li>
+                    <li><a href="#">휴롬쿡마스터</a></li>
+                </ul>
+            </li>
+            <li>콘텐츠
+                <ul class="sub">
+                    <li><a href="4-1.html" target="_blank">휴롬뉴스</a></li>
+                    <li><a href="#">휴롬영상</a></li>
+                </ul>
+            </li>
+            <li>고객지원
+                <ul class="sub">
+                    <li><a href="5-1.html" target="_blank">자주하는질문/답변</a></li>
+                    <li><a href="#">사용설명서</a></li>
+                    <li><a href="#">제품등록/부품 및 AS신청</a></li>
+                    <li><a href="#">칭찬/제안/일반문의</a></li>
+                    <li><a href="#">매장 및 서비스센터 찾기</a></li>
+                </ul>
+            </li>
+            <li><img src="image/cart.png" alt="" ><a href="#">쇼핑몰</a></li>
+        </ul>
+    </div>
+</div>

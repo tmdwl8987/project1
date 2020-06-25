@@ -1,0 +1,71 @@
+body {width: 100%; background: #e8e8e8;}
+#head {width: 100%; border-bottom: 1px solid #c6c6c6; margin-bottom: 50px; position: fixed; background: #fff; z-index: 10;} 
+#header {width: 1024px; margin: 0 auto; overflow: visible;}
+#top_menu {position: relative; background: #fff;}
+
+#section{
+    width: 1024px; margin: 0 auto;
+    padding-top: 160px;
+    position: relative;
+    overflow: hidden;
+}
+#section_box {}
+#section_box > ul {
+    width: 220px;
+    height: 410px;
+    position: relative;
+    background: white;
+    float: left;
+    margin : 15px;
+    padding: 15px;
+}
+
+.line01 {width: 0px; height: 3px; background: #6702e2; position: absolute; left: 0; top: 0; animation-name: line1;}
+.line02 {width: 3px; height: 0px; background: #6702e2; position: absolute; right: 0; top: 0; animation-name: line2;}
+.line03 {width: 0px; height: 3px; background: #6702e2; position: absolute; bottom: 0; right: 0; animation-name: line3;}
+.line04 {width: 3px; height: 0px; background: #6702e2; position: absolute; bottom: 0; left: 0; animation-name: line4;}
+.line01, .line02, .line03, .line04 {
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes line1{
+    from {width: 0px;}
+    to {width: 220px;}
+}
+@keyframes line2{
+    from {height: 0px;}
+    to {height: 410px;}
+}
+@keyframes line3{
+    from {width: 0px;}
+    to {width: 220px;}
+}
+@keyframes line4{
+    from {height: 0px;}
+    to {height: 410px;}
+}
+
+#section_box > ul > a > img {position: absolute; left: 0; top: 0;}
+#section_box > ul > a > li { position: relative; top: 180px; color: black;}
+
+#section_box > ul > a > li:nth-child(2) {font-size: 18px;}
+#section_box > ul > a > li:nth-child(3) {
+    width: 180px; height: 95px;
+    overflow: hidden;
+    white-space: normal;
+    padding: 10px 0px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+#section_box > ul > a > li:nth-child(4) {font-weight: bold;}
+
+.button {overflow: hidden; width: 100%; text-align: center;}
+.button .page_wrap {height: 47px; margin: 50px 0px;}
+.button .page_wrap a {padding: 10px 15px; border: 1px solid #c6c6c6; margin: 0 3px;}
+.button .page_wrap .btn a.active {background: #d0d0d0;}
+
+#last {width: 100%; height: 160px; background: #333337;}
+#lastbox { width: 1024px; margin: 0 auto; top: 160px;}
