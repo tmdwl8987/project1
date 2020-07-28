@@ -28,13 +28,5 @@ body {width: 100%;}
 #section .txt ul li:nth-child(2n) a {display: block; text-indent: -9999px; background: url(image_sub/sub_3_button.png) no-repeat; width: 25px; height: 25px;}
 #section .txt ul li:nth-child(2n):hover a {background-position: 0 -26px;}
 
-#top {font-family: 'Chivo', sans-serif; display: inline-block;  color: #fff; background: #adadad; padding: 8px 12px; border-radius: 30px; position: relative; left: 1100px; top: -15px; cursor: pointer;}
-#top:hover {background: #80bd01;}
-#top i {position: absolute; left: 20px; top: 12px;}
-
-
-/*----------------------------------------------------------*/
 #last {width: 100%; height: 160px; background: #333337;}
-#lastbox { width: 1024px; margin: 0 auto; top: 160px;}
-
-
+#lastbox {width: 1280px; height: 160px; margin: 0 auto;}

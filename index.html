@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hurom</title>
+    <title>HUROM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <link rel="stylesheet" href="Basic/reset.css">
@@ -69,113 +69,105 @@
         // 버튼처리
         $('#prev').click(function(e){
             var prev = banner.eq(current);
-			move(prev, 0, "1024px");
+			move(prev, 0, "1280px");
             current++;
 			if(current == banner.length) current = 0;
 			
 			var next = banner.eq(current);
-			move(next, "-1024px", 0);
+			move(next, "-1280px", 0);
         });
         
         $('#next').click(function(e){
             var prev = banner.eq(current);
-			move(prev, 0, "-1024px");
+			move(prev, 0, "-1280px");
             current++;
 			if(current == banner.length) current = 0;
 			
 			var next = banner.eq(current);
-			move(next, "1024px", 0);
+			move(next, "1280px", 0);
             });
         });
     </script>
-
-<!--
-        이미지가 3>1로 갔을때 바로 1로 보이는게 아니고 3>2>1로 돌아가게 됨
-        var slide = $('.slide_container');
-        var visualLength = slide.find('img').length;
-        var visualWidth = $('#slide_img').width();
-        var current = 0;
-        
-        $('#prev').click(function(e){
-            e.preventDefault();
-            current--;
-                if (current < 0){current = visualLength-1};
-                showImage(current);
-        });        
-        $('#next').click(function(e){
-            e.preventDefault();
-            current++;
-                if (current >= visualLength){current = 0};
-                showImage(current);
-        });
-        
-        function showImage(index){
-            
-            var left = -(index*visualWidth);
-      console.log("left"+left);
-            $('.slide_container').stop().animate({left:left}, 2000);
-        };
--->
    
     <script>
         // 마우스 휠
         $(document).ready(function(){
-            $(".box").on("mousewheel",function(event,delta){
+            
+            // 변수 ht에 브라우저의 높이값을 지정
+            var ht = $(window).height();
+            // 브라우저 높이값을 section의 높이값을 갱신
+            $(".box").height(ht);
+            // 브라우저가 리사이즈 될 될때마다 브라우저와 section의 높이값을 갱신
+            $(window).on("resize",function(){
+                var ht = $(window).height();
+                $(".box").height(ht);
+            });
+            
+            var menu = $('.right_bar ul li');
+            menu.on("click",function(e){
+                e.preventDefault();
                 
+                // 변수 ht에 브라우저의 높이값 지정
+                var ht = $(window).height();
+                
+                // 변수 i에 현재 클릭한 li의 순서 값을 저장
+                var i =$(this).index();
+                
+                // 브라우저의 높이값*박스의 순서값은 현재 박스의 스크롤 위치값과 동일
+                var nowTop = i*ht;
+                
+                // 해당 스크롤 위치값으로 문서를 이동
+                $("html,body").stop().animate({"scrollTop":nowTop},1000);
+                menu.removeClass('on');
+                menu.eq(i).addClass('on');
+            });
+            
+            $(".box").on("mousewheel",function(event,delta){
                 // 마우스 휠을 올렸을때
                 if(delta > 0) {
                     // 변수 prev에 현재 휠을 움직인 section에서 이전 section의 offset().top위치 지정
                     try{
+                        var i =$(this).prev().index();
                         var prev = $(this).prev().offset().top;
                     } catch(e){}
                     //문서 전체를 prev에 지정된 위치로 이동
                     $("html,body").stop().animate({"scrollTop":prev},1000);
-                    console.log("prev")
                     
                 // 마우스 휠을 내렸을때
                 }else if (delta < 0){
                     // 변수 next에 현재 휠을 움직인 section에서 다음 section의 offset().top위치 지정
                     try{
+                        var i =$(this).next().index();
                         var next = $(this).next().offset().top;
                     } catch(e){}
                     //문서 전체를 next에 지정된 위치로 이동
-                    $("html,body").stop().animate({"scrollTop":next} ,1000);
+                    $("html,body").stop().animate({"scrollTop":next} ,1000);}
+                    
+                    menu.removeClass();
+                    menu.eq(i).addClass('on');
+            });
+            
+            $(window).on("scroll",function(){
+                var ht = $(window).height();
+                var scroll = $(window).scrollTop();
+                
+                if(scroll>=ht*0 && scroll<ht*1){
+                    $('.right_bar ul li').removeClass();
+                    $('.right_bar ul li').eq(0).addClass("on");
+                }
+                if(scroll>=ht*1 && scroll<ht*2){
+                    $('.right_bar ul li').removeClass();
+                    $('.right_bar ul li').eq(1).addClass("on");
+                }
+                if(scroll>=ht*2 && scroll<ht*3){
+                    $('.right_bar ul li').removeClass();
+                    $('.right_bar ul li').eq(2).addClass("on");
+                }
+                if(scroll>=ht*3 && scroll<ht*4){
+                    $('.right_bar ul li').removeClass();
+                    $('.right_bar ul li').eq(3).addClass("on");
                 }
             });
-        });
-    </script>
-    
-    <script>
-        // 오른쪽 바 클릭했을 때 해당 슬라이드로 이동
-        $(document).ready(function(){
-            var menu = $('.right_bar > ul > li');
-            var contents = $('.box');
-            
-            menu.click(function(e){
-                
-                var tg = $(this);
-                var i = tg.index();
-                
-                var section = contents. eq(i);
-                var tt = section.offset().top;
-                
-                $('html, body').stop().animate({scrollTop:tt},1000);  
-            });
-            
-            var menu = $('.right_bar2 > ul > li');
-            var contents = $('.box');
-            
-            menu.click(function(e){
-                
-                var tg = $(this);
-                var i = tg.index();
-                
-                var section = contents. eq(i);
-                var tt = section.offset().top;
-                
-                $('html, body').stop().animate({scrollTop:tt},1000);
-                
-            });  
         });
     </script>
     
@@ -237,30 +229,24 @@
 <!-------------------------------------------------------------------------->
     <div id="section1" class="box">
         <h1 class="font"><strong>WHY?</strong><br>HUROM</h1>
-        <div class="why" id="why_box1">
-            <div><img src="image/section1-1.png" alt=""></div>
-            <div class="why_text" ><a href="2-1.html" target="_blank"><strong>기술혁신</strong><br>끊임없는 기술혁신과<br>획기적인 생각으로 탄생한 슬로우주서</a></div>
-        </div>
-        <div class="why" id="why_box2">
-            <div class="why_text" ><a href="2-1.html" target="_blank"><strong>착즙원리</strong><br>스퀴저 원리의 혁신개발로 새로움을 창조하다.</a></div>
-            <div>
-                <img src="image/section1-2-1.png" alt="">
-                <img src="image/section1-2-2.png" alt="">
-                <img src="image/section1-2-right.png" alt="">
+        <div id="why_container">
+            <div class="why" id="why_box1">
+                <div><img src="image/section1-1.png" alt=""></div>
+                <div class="why_text" ><a href="2-1.html"><strong>기술혁신</strong><br>끊임없는 기술혁신과<br>획기적인 생각으로 탄생한 슬로우주서</a></div>
+            </div>
+            <div class="why" id="why_box2">
+                <div class="why_text" ><a href="2-1.html"><strong>착즙원리</strong><br>스퀴저 원리의 혁신개발로 새로움을 창조하다.</a></div>
+                <div>
+                    <img src="image/section1-2-1.png" alt="">
+                    <img src="image/section1-2-2.png" alt="">
+                    <img src="image/section1-2-right.png" alt="">
+                </div>
+            </div>
+            <div class="why" id="why_box3">
+                <div><img src="image/section1-3.png" alt=""></div>
+                <div class="why_text" ><a href="javascript:;"><strong>자연그대로의 맛과 향</strong><br>산화와 열 발생을 줄이고, 섬유 찌꺼기를 제거하여<br> 맛과 향이 살아있는 휴롬주스</a></div>
             </div>
         </div>
-        <div class="why" id="why_box3">
-            <div><img src="image/section1-3.png" alt=""></div>
-            <div class="why_text" ><a href="javascript:;"><strong>자연그대로의 맛과 향</strong><br>산화와 열 발생을 줄이고, 섬유 찌꺼기를 제거하여<br> 맛과 향이 살아있는 휴롬주스</a></div>
-        </div>
-        <div class="right_bar">
-             <ul>
-                 <li><a href="javascript:;">버튼1</a></li>
-                 <li class="on"><a href="javascript:;">버튼2</a></li>
-                 <li><a href="javascript:;">버튼3</a></li>
-                 <li><a href="javascript:;">버튼4</a></li>
-             </ul>
-        </div>  
     </div>
     
 <!-------------------------------------------------------------------------->  
@@ -273,7 +259,7 @@
         </h2>
         <div id="section2_box1">
             <ul>
-                <li><a href="3-1.html" target="_blank"><img src="image/section2-1.jpg" alt=""></a></li>
+                <li><a href="3-1.html"><img src="image/section2-1.jpg" alt=""></a></li>
                 <li><a href="javascript:;"><img src="image/section2-2.png" alt=""></a></li>
                 <li><a href="javascript:;"><img src="image/section2-3.png" alt=""></a></li>
             </ul>
@@ -285,14 +271,6 @@
                 <li><img src="image/bar.png" alt=""><br><strong>휴롬쿡마스터</strong></li>
             </ul>
         </div>
-         <div class="right_bar2">
-             <ul>
-                 <li><a href="javascript:;">버튼1</a></li>
-                 <li><a href="javascript:;">버튼2</a></li>
-                 <li class="on"><a href="javascript:;">버튼3</a></li>
-                 <li><a href="javascript:;">버튼4</a></li>
-             </ul>
-         </div>
     </div>
     
 <!-------------------------------------------------------------------------->
@@ -300,7 +278,7 @@
         <div id="section3">
             <div id="section3_box1">
                 <h1 class="font">HUROM<br><strong>NEWS</strong></h1>
-                <div id="more"><a href="4-1.html" target="_blank">MORE</a></div>
+                <div id="more"><a href="4-1.html">MORE</a></div>
             </div>
             <div id="section3_box2">
                 <ul>
@@ -339,17 +317,13 @@
                     <div class="line04"></div>
                     </a>
                 </ul>
-                <div class="right_bar">
-                     <ul>
-                         <li><a href="javascript:;">버튼1</a></li>
-                         <li><a href="javascript:;">버튼2</a></li>
-                         <li><a href="javascript:;">버튼3</a></li>
-                         <li class="on"><a href="javascript:;">버튼4</a></li>
-                     </ul>
-                </div>
             </div>
         </div>
-        <div id="footer"></div>
+        <footer>
+            <div id="ft_container">
+                <div id="footer"></div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

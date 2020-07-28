@@ -3,7 +3,7 @@ body {width: 100%;}
 #header {width: 1024px; margin: 0 auto; overflow: visible;}
 #top_menu {position: relative; background: #fff;}
 
-#article1 {background: #ededed; padding: 84px; }
+#article1 {background: #ededed; padding: 84px 0;}
 #article2 {background: #ffffff;}
 #article3 {background: #ededed; padding-bottom: 80px;}
 
@@ -27,10 +27,6 @@ body {width: 100%;}
 #article_image .image_box ul {display: flex;}
 #article_image .image_box ul li {flex: 1;}
 #article_image .image_box ul li img {vertical-align: bottom;}
-#top_box {background: #ededed;}
-#top {font-family: 'Chivo', sans-serif; display: inline-block;  color: #fff; background: #adadad; padding: 8px 12px; border-radius: 30px; position: relative; left: 1100px; top: -15px; cursor: pointer;}
-#top:hover {background: #80bd01;}
-#top i {position: absolute; left: 20px; top: 12px;}
 
 #last {width: 100%; height: 160px; background: #333337;}
-#lastbox { width: 1024px; margin: 0 auto; top: 160px;}
+#lastbox {width: 1280px; height: 160px; margin: 0 auto;}

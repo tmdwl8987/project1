@@ -10,14 +10,12 @@ body {width: 100%;}
 #article5 {background: #fff;}
 
 .article_box {width: 1024px; margin: 0 auto; padding: 70px 0px; text-align: center;}
-
 .article_box div:nth-child(1) {display: inline-block; font-weight: bold; color: #fff; background: #808080; padding: 15px; border-radius: 25px;}
 .article_box h1 {font-family: 'Chivo', sans-serif; padding: 20px 0px;}
 .article_box p {line-height: 1.5; padding: 40px 0px; font-size: 18px;}
 .article_box p strong {color: #80bd01;}
 .article_box div:nth-child(4) {width: 80%; margin: 0 auto;}
 .article_box div:nth-child(4) img {width: 100%;}
-
 
 
 #article_box1 p {font-size: 25px;}
@@ -36,7 +34,6 @@ body {width: 100%;}
 #article_box4 ul li p:nth-child(2) strong {color: #000; font-size: 20px;}
 #article_box4 ul li p:nth-child(3) {padding: 10px 20px; font-size: 15px;}
 
-#article_box5 {}
 #article_box5 h1 {margin-bottom: 30px;}
 #article_box5 li {padding: 30px 0px;}
 #article_box5 li:nth-child(3) {width: 90%; margin: 0 auto; padding-top: 0px; padding-bottom: 50px 0px;}
@@ -44,11 +41,5 @@ body {width: 100%;}
 #article_box5 li strong {font-size: 18px;}
 #article_box5 li p {padding: 5px 0px;}
 
-#top {font-family: 'Chivo', sans-serif; display: inline-block;  color: #fff; background: #adadad; padding: 8px 12px; border-radius: 30px; position: absolute; right: 100px; bottom: 10px; cursor: pointer;}
-#top:hover {background: #80bd01;}
-#top i {position: absolute; left: 20px; top: 12px;}
-
-
-
 #last {width: 100%; height: 160px; background: #333337;}
-#lastbox { width: 1024px; margin: 0 auto; top: 160px;}
+#lastbox {width: 1280px; height: 160px; margin: 0 auto;}
