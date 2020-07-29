@@ -6,14 +6,14 @@ body {width: 100%;}
 
 /*--------------------------------------------------------------------*/
 #section {width: 1024px; margin: 0 auto; overflow: hidden; padding-top: 120px; padding-bottom: 50px;}
-#section article {float: left; width: 50%; height: 500px;}
-#section article:nth-child(2n-1){padding-left: 100px; }
-#section article:nth-child(2n){padding-right: 100px;}
-#section article:nth-child(1) {padding-left: 150px;}
-#section article:nth-child(5) {padding-left: 150px;}
-#section article:nth-child(9) {padding-left: 150px;}
-#section article:nth-child(4) {padding-left: 50px;}
-#section article:nth-child(8) {padding-left: 50px;}
+#section > div {float: left; width: 50%; height: 500px;}
+#section > div:nth-child(2n-1){padding-left: 100px; }
+#section > div:nth-child(2n){padding-right: 100px;}
+#section > div:nth-child(1) {padding-left: 150px;}
+#section > div:nth-child(5) {padding-left: 150px;}
+#section > div:nth-child(9) {padding-left: 150px;}
+#section > div:nth-child(4) {padding-left: 50px;}
+#section > div:nth-child(8) {padding-left: 50px;}
 
 #section .txt {padding-top: 100px;}
 #section .txt div {margin: 15px 0px}
