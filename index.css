@@ -1,5 +1,5 @@
 html {height: 100%;}
-body {width: 100%; height: 100%; font-family: 'Nanum Myeongjo', serif;}
+body {width: 100%; height: 100%; font-family: 'Nanumsquare', 'Raleway';}
 #header {width: 1280px; height: 100%; margin: 0 auto; position: relative; overflow: hidden;}
 #slide_img {position: relative; overflow: hidden; width: 1280px; height: 100%; margin: 0 auto;  background: #bdbdbd;}
 #slide_img .slide_container {width: 3840px; position: absolute; left: 0px; top: 0px; margin: 0px; padding: 0px;}
@@ -87,10 +87,10 @@ body {width: 100%; height: 100%; font-family: 'Nanum Myeongjo', serif;}
 #section3_box1 > h1{color: white; font-size: 35px; line-height: 1.1;}
 #section3_box1 > h1 > strong{font-size: 50px; margin-left: 30px;}
 #section3_box1 #more {color: #fff; border: 3px solid #fff; display: inline-block; padding: 5px; margin-top: 10px; margin-left: 110px;}
-#section3_box1 #more:hover {border: 4px solid #6702e2;}
+#section3_box1 #more:hover {border: 3px solid #6702e2;}
 
 #section3_box2 {float: right; margin-right: 100px;}
-#section3_box2 > ul {width: 220px; height: 410px; position: relative; background: white; float: left; margin-right:30px; padding: 15px;}
+#section3_box2 > .news_container {width: 220px; height: 410px; position: relative; background: white; float: left; margin-right:30px; padding: 15px;}
 
 .line01 {width: 0px; height: 3px; background: #6702e2; position: absolute; left: 0; top: 0; animation-name: line1;}
 .line02 {width: 3px; height: 0px; background: #6702e2; position: absolute; right: 0; top: 0; animation-name: line2;}
@@ -118,11 +118,11 @@ body {width: 100%; height: 100%; font-family: 'Nanum Myeongjo', serif;}
     to {height: 410px;}
 }
 
-#section3_box2 > ul > a > img {position: absolute; left: 0; top: 0;}
-#section3_box2 > ul > a > li { position: relative; top: 180px; color: black; }
-#section3_box2 > ul > a > li:nth-child(2) {font-size: 18px;}
-#section3_box2 > ul > a > li:nth-child(3) {width: 180px; height: 95px; overflow: hidden; white-space: normal; padding: 10px 0px; line-height: 1.5; text-align: justify; margin-bottom: 30px; font-size: 14px;}
-#section3_box2 > ul > a > li:nth-child(4) {font-weight: bold;}
+#section3_box2 > .news_container > a > img {position: absolute; left: 0; top: 0;}
+#section3_box2 > .news_container > a > ul> li { position: relative; top: 180px; color: black; }
+#section3_box2 > .news_container > a > ul> li:nth-child(1) {font-size: 18px;}
+#section3_box2 > .news_container > a > ul> li:nth-child(2) {width: 180px; height: 95px; overflow: hidden; white-space: normal; padding: 10px 0px; line-height: 1.5; text-align: justify; margin-bottom: 30px; font-size: 14px;}
+#section3_box2 > .news_container > a > ul> li:nth-child(3) {font-weight: bold;}
 
 
 
