@@ -1,10 +1,11 @@
 html {height: 100%;}
 body {width: 100%; height: 100%; font-family: 'Nanumsquare', 'Raleway';}
 #header {width: 1280px; height: 100%; margin: 0 auto; position: relative; overflow: hidden;}
-#slide_img {position: relative; overflow: hidden; width: 1280px; height: 100%; margin: 0 auto;  background: #bdbdbd;}
+#slide_txt {position: absolute; left: 0; bottom: 7%; z-index: 10;}
+#slide_img {position: relative; overflow: hidden; width: 1280px; height: 100%; margin: 0 auto; background: #bdbdbd;}
 #slide_img .slide_container {width: 3840px; position: absolute; left: 0px; top: 0px; margin: 0px; padding: 0px;}
 #slide_img .slide_container img {position: absolute; display: block; left: 1280px; top: 0; width: 1280px;}
-#slide_img .slide_container img:nth-child(1){left:0;}
+#slide_img .slide_container img:nth-child(1){left: 0;}
 #slide_img ul li a {display: block; text-indent: -9999px;}
 
 #top_menu {width: 100%; height: 84px; position: absolute; left: 0px; top: 0px; background-color: rgba(255,255,255,0.7);}
@@ -31,12 +32,12 @@ body {width: 100%; height: 100%; font-family: 'Nanumsquare', 'Raleway';}
 
 /*  본문1 -------------------------------------------------------------  */
 .font {font-family: 'Chivo', sans-serif;}
-#section1 {width: 1280px; height: 100%; margin: 0 auto; background: url(image/HUROM_article1.png) no-repeat; background-size: cover; overflow: hidden; position: relative;}
-#section1 > h1 {color: white; display: inline-block; font-size: 35px; position: absolute; left: 70px; top: 180px; line-height: 1.2;}
-#section1 > h1 > strong {font-size: 50px;}
-#why_container {padding-top: 150px;}
+#section1 {width: 1280px; height: 100%; margin: 0 auto; background: url(image/HUROM_article1.png) no-repeat; background-size: cover; overflow: hidden; position: relative; display: table;}
+#section1 #why_container {display: table-cell; vertical-align: middle; overflow: hidden; position: relative;}
+#section1 #why_container > h1 {color: white; display: inline-block; font-size: 35px; line-height: 1.2; position: relative; left: 70px; top: 30px;}
+#section1 #why_container > h1 > strong {font-size: 50px;}
 .why {width: 810px; height: 180px; background-color: rgba(255, 255, 255, 0.3); margin: 20px 0px;}
-#why_box1 {float: right; }
+#why_box1 {float: right;}
 #why_box1 div:nth-child(1) {float: left;}
 #why_box1 div:nth-child(1) img {height: 180px;}
 
@@ -57,35 +58,38 @@ body {width: 100%; height: 100%; font-family: 'Nanumsquare', 'Raleway';}
 
 
 /*  본문2 -------------------------------------------------------------  */
-#section2{width: 1280px; height: 100%; margin: 0 auto; position: relative;}
-#section2 > h1 {font-size: 50px; color: black;text-align: center; padding-top: 140px;}
-#section2 > h2 {color: #636363; text-align: center; margin: 15px 0px}
-#section2 > h2 > img {vertical-align: top;} 
-#section2_box1 {width: 876px; height: 500px; background: #555555; position: relative; left: 202px; top: 50px; overflow: hidden;}
-#section2_box1 li:nth-child(1) {float: left;}
-#section2_box1 li:nth-child(2) {width: 438px; height: 250px; background: #f3f6f3; position: absolute; right: 0; z-index: 1;}
-#section2_box1 li:nth-child(2) img {width: 55%; margin-left: 100px;}
-#section2_box1 li:nth-child(3) {width: 438px; height: 250px; background: #dfe4e7; position: absolute; left: 438px; top: 250px;}
-#section2_box1 li:nth-child(3) img {width: 50%; margin-left: 120px; margin-top: 10px;}
-#section2_box1 li {transition-duration: 1s;}
-/*#section2_box1 li:hover {transform: scale(1.1);}*/
-#section2_box1 li:hover img {transform: scale(1.1); transition: all 1s;}
+#section2 {width: 1280px; height: 100%; margin: 0 auto; position: relative; display: table;}
+#section2 #inner_section2 {display: table-cell; vertical-align: middle;}
+#section2 #inner_section2 > h1 {font-size: 45px; color: black; text-align: center;}
+#section2 #inner_section2 > h2 {color: #636363; text-align: center; margin: 10px 0px 50px 0; font-size: 21px;}
+#section2 #inner_section2 > h2 > img {vertical-align: top;}
 
-#section2_box2 {position: relative;}
-#section2_box2 ul li:nth-child(1) {position: absolute; left: 165px; top: -420px;}
-#section2_box2 ul li:nth-child(2) {position: absolute; left: 600px; top: -420px; z-index: 2;}
-#section2_box2 ul li:nth-child(3) {position: absolute; left: 600px; top: -170px;}
-#section2_box2 ul li img {margin-bottom: 5px;}
-#section2_box2 ul li strong {font-size: 18px; margin-left: 60px; }
+#section2_box1 {width: 100%; height: 500px; position: relative;}
+    ul#section2_img {width: 876px; height: 500px; background: #555555; overflow: hidden; margin: 0 auto; position: relative;}
+    ul#section2_img > li:nth-child(1) {float: left;}
+    ul#section2_img > li:nth-child(2) {width: 438px; height: 250px; background: #f3f6f3; position: absolute; right: 0; z-index: 1;}
+    ul#section2_img > li:nth-child(2) img {width: 55%; margin-left: 100px;}
+    ul#section2_img > li:nth-child(3) {width: 438px; height: 250px; background: #dfe4e7; position: absolute; left: 438px; top: 250px;}
+    ul#section2_img > li:nth-child(3) img {width: 50%; margin-left: 120px; margin-top: 10px;}
+    ul#section2_img > li {transition-duration: 1s;}
+    /*#section2_box1 li:hover {transform: scale(1.1);}*/
+    ul#section2_img > li:hover img {transform: scale(1.1); transition: all 1s;}
+    
+    ul#section2_bar {}
+    ul#section2_bar > li:nth-child(1) {position: absolute; left: 160px; top: 20px;}
+    ul#section2_bar > li:nth-child(2) {position: absolute; left: 600px; top: 20px; z-index: 2;}
+    ul#section2_bar > li:nth-child(3) {position: absolute; left: 600px; top: 270px;}
+    ul#section2_bar > li img {margin-bottom: 5px;}
+    ul#section2_bar > li strong {font-size: 18px; margin-left: 60px; }
 
 
 
 /*  본문3 -------------------------------------------------------------  */
 #lastbox {position: relative; width: 100%;}
-#section3 {width: 1280px; height: 100%; margin: 0 auto; background: url(image/HUROM_article3.png) no-repeat; background-size: cover; padding-top: 200px; }
+#section3 {width: 1280px; height: 100%; margin: 0 auto; background: url(image/HUROM_article3.png) no-repeat; background-size: cover; padding-top: 10%;}
 #section3_box1 {display: inline-block; margin-left: 100px;}
 #section3_box1 > h1{color: white; font-size: 35px; line-height: 1.1;}
-#section3_box1 > h1 > strong{font-size: 50px; margin-left: 30px;}
+#section3_box1 > h1 > strong {font-size: 50px; margin-left: 30px;}
 #section3_box1 #more {color: #fff; border: 3px solid #fff; display: inline-block; padding: 5px; margin-top: 10px; margin-left: 110px;}
 #section3_box1 #more:hover {border: 3px solid #6702e2;}
 
